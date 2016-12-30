@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/iv_chuck_image"
+            android:layout_centerInParent="true"
+            android:src="@drawable/chuck_norris_300x213"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_joke"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:background="#7000"
+            android:layout_alignBottom="@id/iv_chuck_image"
+            android:text="" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_prog_bar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:text="@string/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

@@ -26,6 +26,12 @@ public class RetrofitAsyncTask extends AsyncTask<Void,Void,String> {
     }
 
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        fragmentCallback.progressBarSetVisible();
+    }
+
+    @Override
     protected String doInBackground(Void... voids) {
         String joke = null;
         try {
@@ -49,5 +55,6 @@ public class RetrofitAsyncTask extends AsyncTask<Void,Void,String> {
     protected void onPostExecute(String joke) {
         super.onPostExecute(joke);
         fragmentCallback.returnFromApi(joke);
+        fragmentCallback.progressBarSetInvisible();
     }
 }

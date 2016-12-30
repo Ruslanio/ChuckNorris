@@ -6,4 +6,7 @@ package com.example.ruslan.chucknorris.rotation;
 
 public interface FragmentCallback {
     void returnFromApi(String joke);
+    void progressBarSetVisible();
+    void progressBarSetInvisible();
+
 }
